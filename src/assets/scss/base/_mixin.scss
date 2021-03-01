@@ -1,0 +1,82 @@
+// vertical align el
+// usage: @include vertical-align-el;
+//
+@mixin vertical-align-el {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/// Mixin helping defining both `width` and `height` simultaneously.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - Element’s `width`
+/// @param {Length} $height ($width) - Element’s `height`
+///
+/// @example scss - Usage
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///     @include size(100%, 10em);
+///   }
+///
+/// @example css - CSS output
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+///
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+/// Animate css properties
+// usage 
+// scss - @include animate(color);
+//     or @include animate(color width);
+//     or @include animate(color width, 1s, linear);
+//
+$animation-speed: 0.3s !default;
+
+@mixin animate($properties, $duration: $animation-speed, $easing: ease-in-out) {
+    $list: ();
+    @each $prop in $properties {
+        $str: #{$prop} #{$duration} #{$easing};
+        $list: join($list, #{$str}, comma);
+    }
+    transition: $list;
+}
+    
+//font-face
+@mixin font-face($font-name, $font-path, $weight, $style) {
+    @font-face {
+        font-family: '#{$font-name}';
+        src: url('fonts/#{$font-path}.woff2') format('woff2'),
+            url('fonts/#{$font-path}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+// Button sizes
+@mixin button-color($btn-background, $btn-color, $btn-border-color, $btn-hover-background, $btn-hover-color) {
+    background: $btn-background;
+    color: $btn-color;
+    border-color: $btn-border-color;
+
+    &:hover {
+        background: $btn-hover-background;
+        color: $btn-hover-color;
+    }
+}

@@ -1,0 +1,65 @@
+$white:       #FFFFFF;
+$black:       #000000;
+$gray:        #999999;
+$light:       #F5F8FD;
+$blue-1:      #2FB0F9;
+$blue-2:      #319FFA;
+$blue-dark:   #004494;
+$yellow-1:    #FDDF54;
+$yellow-2:    #FFD200;
+$aqua:        #43CAC8;
+$pink:        #FC56CD;
+$red-light:   #FC566A;
+$red-middle:  #EC3A69;
+$red-dark:    #F20E4A;
+
+
+$primary-color: $blue-dark;
+$secondary-color: $white;
+
+$base-font-sans:        'Open Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font:                   $base-font-sans;
+
+// Body
+$base-text-color:             $blue-dark !default;
+$base-background-color:       $light !default;
+$base-background-body:        $light !default;
+$font-size-base:              14px !default;
+$line-height-base:            1.2 !default;
+$base-font-family:            $base-font !default;
+$base-min-width:              320px;
+
+$max-width-center-container:  1200px;
+$gutter:                      15px;
+$padding-container:           0 $gutter;
+
+
+// font weight
+$font-thin:                        100;
+$font-light:                       300;
+$font-normal:                      400;
+$font-medium:                      500;
+$font-semibold:                    600;
+$font-bold:                        700;
+$font-black-font:                  800;
+
+// Liks
+$base-link-color:             $white;
+$base-link-hover-color:       $black;
+$text-decoration:             none;
+$text-decoration-hover:       none;
+
+
+$headings-font-family:              $base-font-family;
+$headings-color:                    inherit !default;
+
+$animation-speed:                   0.3s;
+
+
+$breakpoints: (
+    xs-phone: 320px,
+    phone: 480px,
+    tablet: 768px,
+    desktop: 1024px,
+    widescreen: 1300px
+);
